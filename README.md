@@ -37,10 +37,11 @@ for element in function(Bucket='my-bucket'):
 
 This library provides that function.
 
-## Installation and usage
+## Installation
 
-Download `wrapper.py`, save it in the same directory as the file calling it.
-(I'll eventually make it `pip` installable.)
+`pip install bbp`
+
+## Usage
 
 Here's an example of how to use it for the [Lambda `ListFunctions` paginator](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/lambda.html#Lambda.Paginator.ListFunctions).
 
@@ -72,4 +73,7 @@ for obj in paginator('s3', 'list_objects_v2', 'Contents', Bucket='mybucket'):
 * `Bucket='mybucket'` and any other `name=value` arguments are what get passed to [the paginator](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html#S3.Paginator.ListObjectsV2).
 
 
+## Packaging
 
+This is my first ever package on PyPI.
+I used [this guide](https://medium.com/@joel.barmettler/how-to-upload-your-python-package-to-pypi-65edc5fe9c56) to learn how to do this.
